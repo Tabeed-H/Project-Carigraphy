@@ -1,6 +1,23 @@
 html,
 body {
   margin: 0;
+  scroll-behavior: smooth;
+  cursor: context-menu;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 :root {
   --fontFamily: "Staatliches", cursive;
@@ -16,6 +33,10 @@ body {
 }
 .make-margins {
   margin: 0 2em 0 2em;
+  overflow: hidden;
+}
+.emty-spacer {
+  height: 10vh;
 }
 .header-container {
   height: 15em;
@@ -44,6 +65,7 @@ body {
   color: var(--colorRed);
 }
 .header-menu-container {
+  z-index: 99;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -60,9 +82,11 @@ body {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+.menu-option {
+  cursor: pointer;
+}
 .location-marker {
   color: var(--colorRed);
-  border-bottom: solid 2px #000;
 }
 .about-container {
   margin-top: 2em;
@@ -72,6 +96,7 @@ body {
   align-items: center;
 }
 .card-container {
+  position: relative;
   margin-top: 5em;
   width: 80%;
   height: 15em;
@@ -79,6 +104,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
 .card-img {
   display: flex;
   justify-content: center;
@@ -99,6 +125,7 @@ body {
 .sub-heading {
   font-weight: 100;
   font-size: var(--fontSizeNormal);
+  color: rgb(74, 74, 74);
 }
 .heading {
   font-weight: var(--fontWeightBold);
@@ -113,17 +140,26 @@ body {
   height: 80vh;
 }
 .gallery-side-1 {
+  /* margin-right: 100%; */
+  position: relative;
+  left: -100%;
   flex: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
 }
 .gallery-side-2 {
+  /* margin-left: 100%; */
+  position: relative;
+  right: -100%;
   flex: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  transition-duration: 1s;
 }
 .gallery-side-1-full {
   background-color: rgb(201, 196, 196);
@@ -153,4 +189,30 @@ body {
   width: 100%;
   height: 40vh;
   background-color: #343434;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-edit {
+  color: #fff;
+  font-size: 48px;
+  display: flex;
+}
+.footer-tag {
+  color: #fff;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSizeNormal);
+  font-weight: var(--fontWeightBold);
+}
+.footer-menu {
+  cursor: pointer;
+  height: 50%;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSizeNormal);
+  font-weight: var(--fontWeightNormal);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
 }
