@@ -1,0 +1,26 @@
+{
+  "name": "Carigraphy",
+  "version": "1.0.0",
+  "description": "A page for all the car enthusiasts of J&amp;K.",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js --watch server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tabeed-H/Project-Carigraphy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tabeed-H/Project-Carigraphy/issues"
+  },
+  "homepage": "https://github.com/Tabeed-H/Project-Carigraphy#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
